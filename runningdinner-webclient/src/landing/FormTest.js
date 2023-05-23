@@ -33,36 +33,6 @@ export default function FormTest() {
 
   return (
       <Grid container>
-        <Grid item xs={12}>
-
-          <Box m={3}>
-            <input type="text" name="plain" onChange={handleChangePlain} value={plain} style={{width: '100%'}}/>
-            <div>Plain value: {plain}</div>
-          </Box>
-
-          <Box m={3}>
-            <TextField name="material" value={material} onChange={handleChangeMaterial} fullWidth label="Material" variant={"outlined"} />
-            <div>Material value: {material}</div>
-          </Box>
-
-          <Box m={3}>
-            <form>
-                  <Controller as={TextField}
-                              control={control}
-                              fullWidth
-                              required
-                              variant="filled"
-                              name="value"
-                              label="Formik" />
-
-                  <div>F value: {f.value}</div>
-                  <div>F Live value: {watchedValue}</div>
-                  <PrimaryButton onClick={handleSubmit(performSubmit)} color="primary" variant="contained">Submit</PrimaryButton>
-            </form>
-          </Box>
-
-
-        </Grid>
       </Grid>
   );
 
